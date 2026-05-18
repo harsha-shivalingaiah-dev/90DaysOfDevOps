@@ -52,8 +52,6 @@
 
 •	netstat -tuln: List all open ports and listening services
 
-•	host domain: Simple DNS lookup — resolves hostname to IP address
-
 •	ssh user@host: Connect securely to a remote machine via SSH protocol
 
 •	tcpdump -I eth0: Capture and inspect live network packets on an interface
