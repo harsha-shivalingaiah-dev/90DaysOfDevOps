@@ -104,7 +104,18 @@ sudo systemctl start cron
 ### Step 4: Verify service status
 
 ```bash
+
+ubuntu@ip-10-0-3-187:~$ systemctl status cron
+● cron.service - Regular background program processing daemon
+     Loaded: loaded (/usr/lib/systemd/system/cron.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-05-19 13:46:22 UTC; 18s ago
+
 systemctl is-active cron
+
+ubuntu@ip-10-0-3-187:~$ systemctl is-active cron
+active
+
+
 ```
 
 ### Result
