@@ -1,6 +1,6 @@
 # Day 03 Linux Commands Cheatsheet
 
-# Process management
+## Process management
 
 •	kill -9: Force kill a process immediately — cannot be ignored
 
@@ -18,7 +18,9 @@
 
 •	nohup cmd &: Run a command immune to hangup — survives terminal close
 
-# File system 
+---
+
+## File system 
 
 •	ls -la: List all files including hidden ones with permissions 
 
@@ -38,7 +40,9 @@
 
 •	chmod 755 file: Set owner=rwx, group=rx,others=rx permissions
 
-# Networking
+---
+
+## Networking
 
 •	ping -c 4 host: Send 4 ICMP packets to test reachability and latency
 
