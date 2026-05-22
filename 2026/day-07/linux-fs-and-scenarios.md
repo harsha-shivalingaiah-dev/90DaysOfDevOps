@@ -159,7 +159,23 @@ ubuntu@ip-10-0-3-187:~$
 
 
  ## Scenario 3: Finding Service Logs
- 
+
+
+
+ A developer asks: "Where are the logs for the 'docker' service?" The service is managed by systemd. What commands would you use?
+    
+    Step 1: Check service status first
+    
+    systemctl status docker
+
+    Step 2: Check last 50 lines of logs
+
+    journalctl -u docker -n 50
+
+    Step 3: Check real-time logs
+    
+    journalctl -u docker -f
+
     
 
  ## Scenario 4: File Permissions Issue
