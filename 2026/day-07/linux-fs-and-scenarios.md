@@ -43,7 +43,7 @@ stores temporary data, these files are cleared when system gets rebooted
 
 use this if you want to store files for less time.
 
-
+---
 ### Additional Directories (Good to Know)
 
 •	/bin 
@@ -64,6 +64,7 @@ location for installing third-party applications (chrome,discord,java)
 
 I would use to check manually installed apps
 
+---
 # Hands-On Commands
 
 ## Find Largest Log Files
@@ -80,8 +81,7 @@ ubuntu@ip-10-0-3-187:~$ du -sh /var/log/* 2>/dev/null | sort -h | tail -5
 ubuntu@ip-10-0-3-187:~$
 ```
 
----
-
+## Look for a file under /etc 
 ```bash
 cat fstab
 ubuntu@ip-10-0-3-187:/etc$ cat fstab 
@@ -90,6 +90,7 @@ LABEL=BOOT      /boot   ext4    defaults        0 2
 LABEL=UEFI      /boot/efi       vfat    umask=0077      0 1
 ubuntu@ip-10-0-3-187:
 ```
+## Display contents of hidden files under home directory 
 
 ```bash
 ls -la ~
@@ -112,7 +113,7 @@ drwx------ 2 ubuntu ubuntu 4096 May 12 07:55 .ssh
 drwxrwxr-x 2 ubuntu ubuntu 4096 May 21 07:25 demo
 ubuntu@ip-10-0-3-187:~$
 ```
-
+---
 
 # Scenario-Based Practice
 
@@ -159,19 +160,7 @@ ubuntu@ip-10-0-3-187:~$
 
  ## Scenario 3: Finding Service Logs
  
-    A developer asks: "Where are the logs for the 'docker' service?" The service is managed by systemd. What commands would you use?
     
-    Step 1: Check service status first
-    
-    systemctl status docker
-
-    Step 2: Check last 50 lines of logs
-
-    journalctl -u docker -n 50
-
-    Step 3: Check real-time logs
-    
-    journalctl -u docker -f
 
  ## Scenario 4: File Permissions Issue
  
