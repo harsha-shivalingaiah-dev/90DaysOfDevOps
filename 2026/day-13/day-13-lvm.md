@@ -78,6 +78,13 @@ lvm>
 
 ## Task 5: Format and Mount
 
+root@ip-172-31-42-234:~# mkdir /mnt/tws_lv_mount
+
+root@ip-172-31-42-234:~# mkfs.ext4 /dev/tws_lg/tws_lv
+
+root@ip-172-31-42-234:~# mount /dev/tws_lg/tws_lv /mnt/tws_lv_mount
+
+<img width="1091" height="751" alt="image" src="https://github.com/user-attachments/assets/cd68d8cd-90fa-4f72-af17-884e103fde95" />
 
 
 
