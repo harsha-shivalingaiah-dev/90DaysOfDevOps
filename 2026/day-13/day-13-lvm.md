@@ -88,4 +88,67 @@ root@ip-172-31-42-234:~# mount /dev/tws_lg/tws_lv /mnt/tws_lv_mount
 
 
 
+<img width="800" height="449" alt="image" src="https://github.com/user-attachments/assets/76afcfe1-234a-4d6d-a1e8-d7044991b828" />
+
+
+## Task 6: Extend the Volume
+
+<img width="1207" height="483" alt="image" src="https://github.com/user-attachments/assets/946e6b0c-5068-4a56-9b8f-494064db0ffe" />
+
+
+lvextend -L +2G /dev/tws_lg/tws_lv
+resize2fs /dev/tws_lg/tws_lv
+
+root@ip-172-31-42-234:~# resize2fs /dev/tws_lg/tws_lv
+
+resize2fs 1.47.2 (1-Jan-2025)
+
+Filesystem at /dev/tws_lg/tws_lv is mounted on /mnt/tws_lv_mount; on-line resizing required
+
+old_desc_blocks = 2, new_desc_blocks = 2
+
+The filesystem on /dev/tws_lg/tws_lv is now 3145728 (4k) blocks long.
+
+
+root@ip-172-31-42-234:~# df -h | grep mnt
+
+/dev/mapper/tws_lg-tws_lv   12G  2.1M   12G   1% /mnt/tws_lv_mount
+
+/dev/nvme3n1                14G  2.1M   13G   1% /mnt/tws_disk_mount
+
+root@ip-172-31-42-234:~#
+
+
+## Task 7: Mount Physical Volume Directly
+
+
+<img width="613" height="62" alt="image" src="https://github.com/user-attachments/assets/93a0ab91-8ebe-4c25-8a3c-0fc649b4179e" />
+
+
+<img width="1045" height="305" alt="image" src="https://github.com/user-attachments/assets/6aa88df7-e4ba-4529-a19b-634947993370" />
+
+
+<img width="1123" height="428" alt="image" src="https://github.com/user-attachments/assets/5d833df3-dde7-44ab-87d5-9c5e894e900b" />
+
+
+## Learnings
+* How to add storage to instance
+  
+* How to create Physical, Logical and Volume Groups
+  
+* How to mount the volume
+  
+* How to Format the Volume
+
+
+
+
+
+
+
+
+
+
+
+
 
