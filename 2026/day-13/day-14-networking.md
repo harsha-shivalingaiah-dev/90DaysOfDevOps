@@ -80,7 +80,53 @@ Application Layer (HTTP/HTTPS) → TCP → IP → Network Link
    
    netstat -an | head
 
+   Observation:
+
+   Active LISTEN and ESTABLISHED connections observed.
+
    <img width="1016" height="242" alt="image" src="https://github.com/user-attachments/assets/5380c39e-6a82-4506-9a7e-389b2114ae20" />
+
+   ## Mini Task: Port Probe & Interpret
+
+   nc -zv localhost 22
+
+   Observation:
+
+   ubuntu@ip-172-31-42-234:~$ nc -zv localhost 22
+   
+   Connection to localhost (127.0.0.1) 22 port [tcp/ssh] succeeded!
+
+
+   SSH port is reachable.
+   
+   ## If unreachable, check service status and firewall configuration.
+
+   * First check the status of Service systemctl status <Service>
+   
+   * Check the logs of the service journalctl -u <Service>
+   
+   * Check firwall permission sudo uwf status
+
+   ## Reflection
+   
+   Fastest Command for Troubleshooting
+   
+   ping provides the quickest indication of connectivity issues.
+   
+   If DNS Fails
+   
+   * Inspect the Application layer and DNS configuration.
+   
+   If HTTP 500 Appears
+   
+   * Inspect the Application layer and web server logs.
+   
+   Two Follow-up Checks
+   
+   * Verify service status using systemctl.
+   * Check firewall rules and network logs.
+
+   
 
 
 
