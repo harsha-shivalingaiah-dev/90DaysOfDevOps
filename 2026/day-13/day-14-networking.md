@@ -125,6 +125,14 @@ Application Layer (HTTP/HTTPS) → TCP → IP → Network Link
    
    * Verify service status using systemctl.
    * Check firewall rules and network logs.
+  
+   ## Key Learnings
+   
+   Learned how networking layers relate to real-world traffic.
+   
+   Used essential troubleshooting commands.
+   
+   Verified connectivity, DNS, ports, and HTTP responses. 
 
    
 
