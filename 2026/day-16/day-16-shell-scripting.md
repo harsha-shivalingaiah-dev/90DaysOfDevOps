@@ -138,6 +138,89 @@ Enter a number: -1
 Negative Number
 ```
 
+<img width="759" height="202" alt="image" src="https://github.com/user-attachments/assets/8a2f5cc8-a0f3-4b80-b7e5-dea03cc59664" />
 
 
+## Task 4B: File Existence Check
+
+Script: file_check.sh
+
+```bash
+#!/bin/bash
+
+read -p "Enter filename: " FILE
+
+if [ -f "$FILE" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+```
+
+Sample Output
+
+```bash
+Enter filename: hello.sh
+
+File exists
+```
+
+<img width="759" height="86" alt="image" src="https://github.com/user-attachments/assets/3f69eb06-d075-4862-8578-4c6b910f8b92" />
+
+
+<img width="585" height="226" alt="image" src="https://github.com/user-attachments/assets/46d83756-c8c0-43b2-8949-0fcbc665f102" />
+
+
+## Task 5: Server Status Check
+
+Script: server_check.sh
+
+```bash
+
+#!/bin/bash
+
+SERVICE="ssh"
+
+read -p "Do you want to check the status? (y/n): " CHOICE
+
+if [ "$CHOICE" = "y" ]; then
+
+    if systemctl is-active --quiet $SERVICE; then
+        echo "$SERVICE is active"
+    else
+        echo "$SERVICE is not active"
+    fi
+
+else
+    echo "Skipped."
+fi
+```
+
+<img width="690" height="256" alt="image" src="https://github.com/user-attachments/assets/085807d5-0d5b-4e13-b058-2eea4efdb450" />
+
+
+Sample Output
+```bash
+Do you want to check the status? (y/n): y
+
+ssh is inactive
+
+Do you want to check the status? (y/n): y
+
+docker is not active
+
+```
+
+
+# Key Learnings
+
+* The shebang line specifies which interpreter executes a script.
+
+* Variables help store and reuse data throughout a script.
+
+* The read command allows user interaction through terminal input.
+
+* Conditional statements (if, elif, else) enable decision-making in scripts.
+
+* File checks and service status checks are common tasks in Linux administration and DevOps automation.
 
