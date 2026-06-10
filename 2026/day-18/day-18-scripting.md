@@ -96,9 +96,45 @@ echo "Strict Mode Demo"
 
 # cat missing_file.txt | grep hello
 
-```
-
+``` 
 <img width="683" height="413" alt="image" src="https://github.com/user-attachments/assets/88ffc087-29d3-48c0-bf5b-f43012744ce6" />
+
+# Task 4: Local Variables
+
+Create local_demo.sh with:
+
+A function that uses local keyword for variables
+
+Show that local variables don't leak outside the function
+
+Local variables stay inside functions
+Regular variables remain accessible outside
+
+Compare with a function that uses regular variables
+
+```bash 
+#!/bin/bash
+
+local_var_demo() {
+    local name="Harsha"
+    echo "Inside function: $name"
+}
+
+regular_var_demo() {
+    city="Bengaluru"
+    echo "Inside function: $city"
+}
+
+
+local_var_demo
+
+echo "Outside function local variable: ${name:-Not Available}"
+
+regular_var_demo
+
+echo "Outside function regular variable: $city"
+
+``` 
 
 
 
