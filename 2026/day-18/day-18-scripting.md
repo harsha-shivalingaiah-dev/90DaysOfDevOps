@@ -99,7 +99,7 @@ echo "Strict Mode Demo"
 ``` 
 <img width="683" height="413" alt="image" src="https://github.com/user-attachments/assets/88ffc087-29d3-48c0-bf5b-f43012744ce6" />
 
-# Task 4: Local Variables
+## Task 4: Local Variables
 
 Create local_demo.sh with:
 
@@ -134,7 +134,87 @@ regular_var_demo
 
 echo "Outside function regular variable: $city"
 
-``` 
+```
+
+<img width="753" height="124" alt="image" src="https://github.com/user-attachments/assets/03401b03-a256-4381-a717-5ec983efd7e1" />
+
+
+## Task 5: Build a Script — System Info Reporter
+
+Create system_info.sh that uses functions for everything:
+
+ Function to print hostname and OS info
+ Function to print uptime
+ Function to print disk usage (top 5 by size)
+ Function to print memory usage
+ Function to print top 5 CPU-consuming processes
+ 
+ A main function that calls all of the above with section headers
+ Use set -euo pipefail at the top
+ Output should look clean and readable.
+
+ ```bash
+
+#!/bin/bash
+set -euo pipefail
+
+system_info() {
+    echo "=============== Hostname & OS Info ==============="
+    echo "Hostname : $(hostname)"
+    echo "OS       : $(lsb_release -ds || echo 'N/A')"
+    echo "Kernel   : $(uname -r)"
+    echo
+}
+
+print_uptime() {
+    echo "==================== Uptime ====================="
+    uptime
+    echo
+}
+
+print_disk() {
+    echo "================== Disk Usage ==================="
+    df -h | sort -k5 -hr | head -6
+    echo
+}
+
+print_memory() {
+    echo "================= Memory Usage =================="
+    free -h
+    echo
+}
+
+print_cpu() {
+    echo "============ Top 5 CPU Processes ================"
+    ps aux --sort=-%cpu | head -6
+    echo
+}
+
+main() {
+    system_info
+    print_uptime
+    print_disk
+    print_memory
+    print_cpu
+}
+
+main
+
+```
+
+Sample Output
+
+<img width="1099" height="670" alt="image" src="https://github.com/user-attachments/assets/3822e6bc-1ddb-4f1b-8971-fc59e05c4d2c" />
+
+------
+Key Learnings
+
+Functions make scripts reusable and cleaner.
+
+local variables prevent accidental conflicts.
+
+set -euo pipefail makes scripts safer and production-ready.
+
 
 
 
