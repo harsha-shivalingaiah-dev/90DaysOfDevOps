@@ -144,13 +144,20 @@ echo "Outside function regular variable: $city"
 Create system_info.sh that uses functions for everything:
 
  Function to print hostname and OS info
+ 
  Function to print uptime
+ 
  Function to print disk usage (top 5 by size)
+ 
  Function to print memory usage
+ 
  Function to print top 5 CPU-consuming processes
  
+ 
  A main function that calls all of the above with section headers
+ 
  Use set -euo pipefail at the top
+ 
  Output should look clean and readable.
 
  ```bash
@@ -207,13 +214,14 @@ Sample Output
 <img width="1099" height="670" alt="image" src="https://github.com/user-attachments/assets/3822e6bc-1ddb-4f1b-8971-fc59e05c4d2c" />
 
 ------
-Key Learnings
 
-Functions make scripts reusable and cleaner.
+### Key Learnings
 
-local variables prevent accidental conflicts.
+* Functions make scripts reusable and cleaner.
 
-set -euo pipefail makes scripts safer and production-ready.
+* local variables prevent accidental conflicts.
+
+* set -euo pipefail makes scripts safer and production-ready.
 
 
 
