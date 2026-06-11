@@ -208,28 +208,30 @@ Creates archive directory if missing
 
 Moves processed log file to archive/
 
-Commands Used
+### Commands Used
 
-grep
+* grep
 Used for:
 
 Finding ERROR
 Finding Failed
 Finding CRITICAL
-wc
+
+* wc
 Used for counting:
 
 Total lines
 Error lines
+
 sort
 Used for sorting error messages.
 
-uniq -c
+* uniq -c
 Used for counting duplicate error messages.
 
-sed
+* sed
 Used for extracting only the error message text.
 
-mv
+* mv
 Used to move processed logs into archive folder.
 
