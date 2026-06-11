@@ -13,6 +13,8 @@ Prints how many files were compressed and deleted
 
 Exits with an error if the directory doesn't exist
 
+log-rotate.sh 
+
 ```bash
 
 #!/bin/bash
@@ -46,6 +48,7 @@ echo "Files deleted: $deleted"
 
 ```
 
+<img width="795" height="209" alt="image" src="https://github.com/user-attachments/assets/171264af-a5e7-4962-9419-3826438c3d10" />
 
 
 ## Task 2: Server Backup Script
