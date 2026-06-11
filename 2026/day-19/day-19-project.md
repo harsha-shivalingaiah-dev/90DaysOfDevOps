@@ -105,6 +105,7 @@ Read: crontab -l — what's currently scheduled?
 
 Understand cron syntax:
 
+```bash
 * * * * *  command
 │ │ │ │ │
 │ │ │ │ └── Day of week (0-7)
@@ -112,7 +113,7 @@ Understand cron syntax:
 │ │ └────── Day of month (1-31)
 │ └──────── Hour (0-23)
 └────────── Minute (0-59)
-
+```
 
 Run log_rotate.sh every day at 2 AM ---> 0 2 * * *
 
@@ -134,4 +135,4 @@ Create maintenance.sh that:
 
 * Write the cron entry to run it daily at 1 AM
 
-0 1 * * *
+  0 1 * * *
