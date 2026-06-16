@@ -88,3 +88,44 @@ For each command, write:
 What it does (1 line)
 An example of how to use it
 
+
+
+## Task 4: Stage and Commit
+
+Stage your file
+
+Check what's staged
+
+Commit with a meaningful message
+
+View your commit history
+
+<img width="434" height="113" alt="image" src="https://github.com/user-attachments/assets/6ed077e4-1774-424f-95a5-550eaaa553f8" />
+
+
+<img width="452" height="265" alt="image" src="https://github.com/user-attachments/assets/57ae30b6-5658-4320-80ce-f2862747e221" />
+
+
+## Task 5: Make More Changes and Build History
+
+Edit git-commands.md — add more commands as you discover them
+
+Check what changed since your last commit
+
+Stage and commit again with a different, descriptive message
+
+Repeat this process at least 3 times so you have multiple commits in your history
+
+View the full history in a compact format
+
+<img width="409" height="152" alt="image" src="https://github.com/user-attachments/assets/9666837c-be2e-41f8-9970-7624d71c2217" />
+
+
+
+<img width="524" height="296" alt="image" src="https://github.com/user-attachments/assets/6514d78e-cb09-4074-887e-a6e2af14f84a" />
+
+
+<img width="358" height="45" alt="image" src="https://github.com/user-attachments/assets/53da35e0-a27d-4bae-bf67-ff09f454f1a8" />
+
+
+
