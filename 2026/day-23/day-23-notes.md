@@ -34,14 +34,23 @@ git switch feature-1
 
 Create a new branch and switch to it in a single command — call it feature-2
 git switch -c feature-2
+```
 
-Try using git switch to move between branches — how is it different from git checkout?
+
+
+<img width="458" height="254" alt="image" src="https://github.com/user-attachments/assets/00c40bef-3da8-49c4-a0dc-0d1816bc20c1" />
+
+
+
+
+## Try using git switch to move between branches — how is it different from git checkout?
 
 git switch is used specifically for switching branches.
 
 git checkout can switch branches, restore files, and move to specific commits.
 
 git switch is the newer and safer command.
+
 
 Make a commit on feature-1 that does not exist on main
 
@@ -50,3 +59,32 @@ Switch back to main — verify that the commit from feature-1 is not there
 Delete a branch you no longer need
 
 Add all branching commands to your git-commands.md
+
+
+## Task 3: Push to GitHub
+
+Create a new repository on GitHub (do NOT initialize it with a README)
+
+Connect your local devops-git-practice repo to the GitHub remote
+
+Push your main branch to GitHub
+
+Push feature-1 branch to GitHub
+
+Verify both branches are visible on GitHub
+
+
+
+
+## Task 4: Pull from GitHub
+
+Make a change to a file directly on GitHub (use the GitHub editor)
+
+Pull that change to your local repo
+
+
+## Task 5: Clone vs Fork
+
+Clone any public repository from GitHub to your local machine
+
+Fork the same repository on GitHub, then clone your fork
