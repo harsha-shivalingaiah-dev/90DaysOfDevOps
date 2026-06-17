@@ -60,3 +60,25 @@ Open a repo in your browser directly from the terminal
 Delete the test repo you created (be careful!)
 
 <img width="692" height="187" alt="image" src="https://github.com/user-attachments/assets/3150dc36-b2fb-4361-ac1d-736194aa34f1" />
+
+
+## Task 3: Issues
+
+### Create an issue on one of your repos from the terminal — give it a title, body, and a label
+
+<img width="449" height="104" alt="image" src="https://github.com/user-attachments/assets/53f588bd-1e66-4b47-884d-c224ec803c14" />
+
+
+* List all open issues on that repo
+* View a specific issue by its number
+* Close an issue from the terminal
+
+<img width="952" height="289" alt="image" src="https://github.com/user-attachments/assets/2a1bc9b4-b35e-45d0-8f98-ba7148fd26b1" />
+
+
+### How gh issue can be used in automation
+* Auto-create bug reports
+* Create monitoring alerts
+* Generate maintenance tasks
+* Track CI/CD failures
+
