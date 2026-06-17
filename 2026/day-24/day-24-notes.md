@@ -74,8 +74,50 @@ Observe your git log --oneline --graph --all — how does the history look compa
   
   It can cause a mess as its id becomes diffrent
 
+
 * When would you use rebase vs merge?
   
   While working on diffrent branches we can use merge
   
   rebase can be use to maintain a linear history
+
+
+## Task 3: Squash Commit vs Merge Commit
+
+* What does squash merging do?
+  
+squash combines all commit in a single commit in the branch we choose
+
+* When would you use squash merge vs regular merge?
+  
+If we have a multiple commit the we can use squash merge or regular merge
+
+* What is the trade-off of squashing?
+  
+This keeps the main branch history clean
+
+## Task 4: Git Stash 
+
+* What is the difference between git stash pop and git stash apply?
+  
+git stash pop removes the changes from the stash list after applying them
+
+git stash apply keeps the changes in the stash list, allowing you to re-apply them later if needed
+
+* When would you use stash in a real-world workflow?
+  
+When i need to swith to other branch in case of emergency
+
+## Task 5: Cherry Picking
+
+* What does cherry-pick do?
+  
+Cherry-pick pick a particular commit with its id from branch
+
+* When would you use cherry-pick in a real project?
+
+when there is fix in a code I would cherry-pick the commit
+
+* What can go wrong with cherry-picking?
+
+Main factor is its Id it changes and can create a confusion
