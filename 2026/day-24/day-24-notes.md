@@ -38,3 +38,23 @@ Git creates a merge commit when the branches have diverged, meaning both have ne
 * What is a merge conflict?
 
 Merge conflicts happen because the same file is edited in two branches.Git cannot figure out which version of a file to keep during a merge.
+
+
+## Task 2: Git Rebase — Hands-On
+
+Create a branch feature-dashboard from main, add 2-3 commits
+
+<img width="584" height="162" alt="image" src="https://github.com/user-attachments/assets/def0f9d4-e37b-4a5d-a9ba-9b51e8e67c8a" />
+
+While on main, add a new commit (so main moves ahead)
+
+<img width="490" height="94" alt="image" src="https://github.com/user-attachments/assets/c5b5cb80-5aa1-479e-babe-d87dc53b97c9" />
+
+
+Switch to feature-dashboard and rebase it onto main
+
+Observe your git log --oneline --graph --all — how does the history look compared to a merge?
+
+
+<img width="452" height="199" alt="image" src="https://github.com/user-attachments/assets/5bbe544c-4988-4fc6-8ae5-9c4ae62e8713" />
+
