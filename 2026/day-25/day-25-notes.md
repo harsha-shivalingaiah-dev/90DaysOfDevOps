@@ -5,88 +5,92 @@
 
 * What happens with git reset --soft?
 
-Moves HEAD back one commit.
+  Moves HEAD back one commit.
 
-Removes commit from history.
+  Removes commit from history.
 
-Keeps all changes staged.
+  Keeps all changes staged.
 
-Ready to commit again.
+  Ready to commit again.
 
 * What happens with git reset --mixed?
-Moves HEAD back one commit.
 
-Removes commit from history.
+  Moves HEAD back one commit.
 
-Keeps changes in working directory.
+  Removes commit from history.
+  
+  Keeps changes in working directory.
 
-Changes become unstaged.
+  Changes become unstaged.
 
 * What happens with git reset --hard?
-Moves HEAD back one commit.
 
-Removes commit from history.
+  Moves HEAD back one commit.
 
-Deletes all changes permanently.
+  Removes commit from history.
+
+  Deletes all changes permanently.
 
 * Difference Between --soft, --mixed, and --hard
---soft → Removes commit but keeps changes staged.
   
---mixed → Removes commit and keeps changes unstaged.
+  --soft → Removes commit but keeps changes staged.
+  
+  --mixed → Removes commit and keeps changes unstaged.
 
---hard → Removes commit and deletes changes completely.
+  --hard → Removes commit and deletes changes completely.
 
 * Which One Is Destructive?
 
-git reset --hard
-Permanently removes commits and working directory changes.
+  git reset --hard
+  
+  Permanently removes commits and working directory changes.
 
 * When Would You Use Each One?
   
---soft → Modify commit message or combine commits.
+  --soft → Modify commit message or combine commits.
 
---mixed → Reorganize files before committing again.
+  --mixed → Reorganize files before committing again.
 
---hard → Discard unwanted local changes.
+  --hard → Discard unwanted local changes.
 
 * Should You Use Reset on Pushed Commits?
 
-No. It rewrites history and can cause conflicts for collaborators.
+  No. It rewrites history and can cause conflicts for collaborators.
 
 
 ## Task 2: Git Revert
 
 * What Happens When Reverting Commit Y?
   
-Git creates a new commit.
+  Git creates a new commit.
 
-The new commit reverses the changes made by commit Y.
+  The new commit reverses the changes made by commit Y.
 
-Commit Y remains in history.
+  Commit Y remains in history.
 
 * Is Commit Y Still in History?
-Yes.
-Git Revert preserves history.
-
+  Yes.
+  Git Revert preserves history.
+ 
 * Difference Between Reset and Revert
   
-git reset rewrites history and removes commits.
+  git reset rewrites history and removes commits.
 
-git revert preserves history and creates an undo commit.
+  git revert preserves history and creates an undo commit.
 
 * Why Is Revert Safer?
   
-History remains intact.
+  History remains intact.
 
-Safe for shared repositories.
+  Safe for shared repositories.
 
-No force push required.
+  No force push required.
 
 * When To Use Revert vs Reset?
 
-Use Revert for shared or pushed commits.
+  Use Revert for shared or pushed commits.
 
-Use Reset for local commits that haven't been pushed.
+  Use Reset for local commits that haven't been pushed.
 
 
 ## Task 3: Reset vs Revert Comparison
@@ -98,3 +102,140 @@ Use Reset for local commits that haven't been pushed.
 | Creates new commit | No | Yes |
 | Safe for shared branches | No | Yes |
 | Best use case | Local cleanup | Undo pushed commits |
+
+
+## Task 4: Branching Strategies
+
+### Git Flow 
+
+The workflow revolves around two **permanent main branches** and **three temporary supporting branches**
+
+```bash
+
+                    ► [ feature/* ] ──┐
+                    /                   ▼
+[ main ] ──► [ develop ] ───────────► [ release/* ] ──► [ main ] (Release)
+   │                                                       │
+   └──────► [ hotfix/* ] ──────────────────────────────────┴──► [ develop ] (Sync)
+
+```
+
+### Permanent Main branches
+
+main (formerly master) -- Holds official production-ready release history.
+
+develop -- Acts as the integration branch for all new features.
+
+### Temporary supporting branches
+
+feature/* -- Used to develop new features or major enhancements. (branches off develop)
+
+release/* -- Prepares a completed development cycle for production deployment. (branches off develop)
+
+hotfix/* -- Swiftly addresses critical bugs discovered in live production. (branches off main)
+
+
+Pros
+
+* Structured workflow.
+* Clear release process.  
+* Suitable for large teams.
+  
+Cons
+
+* Complex.
+* More branch management.
+  
+Used For
+* Enterprise teams.
+* Scheduled releases.
+
+### GitHub Flow
+
+How It Works
+
+* Single main branch.
+* Create feature branch.
+* Open Pull Request.
+* Review and merge back to main.
+  
+Pros
+
+* Simple.
+* Fast deployment.
+* Easy to learn.
+
+Cons
+
+* Less release control.
+
+Used For
+
+* Startups.
+* Continuous deployment.
+
+### Trunk-Based Development
+
+How It Works
+
+* Developers work on short-lived branches.
+* Merge changes frequently into main.
+* Main branch always stays deployable.
+
+Pros
+* Fast development.
+* Supports CI/CD.
+* Fewer merge conflicts.
+
+Cons
+* Requires strong testing.
+
+## Which Strategy Would You Use for a Startup Shipping Fast?
+
+Trunk-Based Development
+
+Reason:
+
+* Fast feedback.
+* Rapid delivery.
+* Minimal branching overhead.
+  
+## Which Strategy Would You Use for a Large Team with Scheduled Releases?
+
+GitFlow
+
+Reason:
+
+* Better release management.
+* Clear separation of development and production.
+  
+## Which Strategy Does an Open Source Project Use?
+Kubernetes
+
+* Uses a Trunk-Based/GitHub Flow style workflow.
+* Main branch for active development.
+* Release branches for stable versions.
+
+## Git Reflog
+
+What Is Git Reflog?
+
+Records all HEAD movements.
+Tracks resets, commits, checkouts, and merges.
+
+Why Is It Useful?
+
+* Recover lost commits.
+* Undo accidental hard resets.
+* Restore deleted work.
+
+Example
+
+git reflog
+
+git reset --hard HEAD@{1}
+
+
+
+
+
