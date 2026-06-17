@@ -58,3 +58,24 @@ Observe your git log --oneline --graph --all — how does the history look compa
 
 <img width="452" height="199" alt="image" src="https://github.com/user-attachments/assets/5bbe544c-4988-4fc6-8ae5-9c4ae62e8713" />
 
+
+
+* What does rebase actually do to your commits?
+  
+   rebase "rewrites history" by taking branch commits and replaying them one by one on top of the latest version of main
+
+* How is the history different from a merge?
+  
+  A merge creates a new "merge commit" that ties two histories together
+
+  Rebase creates entirely new commits for your work, resulting linear history without merge bubbles
+
+* Why should you never rebase commits that have been pushed and shared with others?
+  
+  It can cause a mess as its id becomes diffrent
+
+* When would you use rebase vs merge?
+  
+  While working on diffrent branches we can use merge
+  
+  rebase can be use to maintain a linear history
