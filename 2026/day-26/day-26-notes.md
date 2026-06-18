@@ -125,3 +125,12 @@ gh pr review <PR-number>
 
 * They allow automation of workflows without interactive sessions, enable triggering, monitoring, and managing GitHub Actions directly from scripts or automation tools
 
+
+## Task 6: Useful gh Tricks
+
+* gh api — make raw GitHub API calls from the terminal
+* gh gist — create and manage GitHub Gists
+* gh release — create and manage releases
+* gh alias — create shortcuts for commands you use often
+* gh search repos — search GitHub repos from the terminal
+
