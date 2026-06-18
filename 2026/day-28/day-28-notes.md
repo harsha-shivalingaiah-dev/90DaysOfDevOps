@@ -47,3 +47,61 @@ Go through the checklist below. For each item, mark yourself honestly:
 * [revisit]   Use git reset (soft, mixed, hard) and git revert
 * [Confident] Explain GitFlow, GitHub Flow, and Trunk-Based Development
 * [Confident] Use GitHub CLI to create repos, PRs, and issues
+
+----
+
+## Task 2: Topics Revisited
+
+### 1. Logical Volume Manager (LVM)
+
+LVM provides flexible storage management compared to traditional disk partitions.
+
+Key components:
+
+* Physical Volume (PV)
+* Volume Group (VG)
+* Logical Volume (LV)
+
+Important Commands:
+
+```bash
+pvcreate /dev/sdb
+vgcreate data_vg /dev/sdb
+lvcreate -L 5G -n app_lv data_vg
+lvdisplay
+```
+
+Learning
+
+* Storage can be extended without repartitioning disks.
+* Multiple disks can be combined into one volume group.
+* Logical volumes can be resized dynamically.
+* LVM is widely used in enterprise Linux environments.
+
+## 2. Shell Script Error Handling
+
+Shell scripts should fail safely when unexpected situations occur.
+
+Important options
+
+```bash
+set -e
+set -u
+set -o pipefail
+```
+
+Example 
+
+```bash
+#!/bin/bash
+
+set -euo pipefail
+
+echo "Starting script"
+cp file.txt backupdir/
+echo "Completed"
+```
+
+
+
+
