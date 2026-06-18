@@ -82,3 +82,46 @@ Delete the test repo you created (be careful!)
 * Generate maintenance tasks
 * Track CI/CD failures
 
+
+## Task 4: Pull Requests
+
+1. Create a branch, make a change, push it, and create a pull request entirely from the terminal
+   
+2. List all open PRs on a repo
+   
+3. View the details of your PR — check its status, reviewers, and checks
+   
+4. Merge your PR from the terminal
+
+<img width="466" height="121" alt="image" src="https://github.com/user-attachments/assets/90620c59-06fc-441d-83af-1d6dd185f021" />
+
+
+<img width="622" height="291" alt="image" src="https://github.com/user-attachments/assets/bcf6f2f7-ad59-4329-b6d7-7f0d003b4a9e" />
+
+
+<img width="614" height="265" alt="image" src="https://github.com/user-attachments/assets/dc9ccca3-193f-4f28-9acd-64a5820b8476" />
+
+### Answer in your notes:
+
+What merge methods does gh pr merge support?
+
+Merge Commit
+
+Squash and Merge
+
+Rebase and Merge
+
+How would you review someone else's PR using gh?
+
+gh pr review <PR-number>
+
+
+## Task 5: GitHub Actions & Workflows (Preview)
+
+* List the workflow runs on any public repo that uses GitHub Actions
+* View the status of a specific workflow run
+
+## How could gh run and gh workflow be useful in a CI/CD pipeline?
+
+* They allow automation of workflows without interactive sessions, enable triggering, monitoring, and managing GitHub Actions directly from scripts or automation tools
+
