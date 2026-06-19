@@ -139,3 +139,51 @@ Remove a container
 
 
 ## Task 4: Working with Running Containers
+
+1.Run an Nginx container in detached mode
+
+docker run -d --name my-nginx -p 8080:80 nginx 
+
+* -d → Detached Mode
+* --name → Assign Container Name
+* -p → Port Mapping
+
+2.Viewing Logs
+
+* docker logs my-nginx
+
+3.Real-Time Logs
+
+* docker logs -f my-nginx
+
+<img width="818" height="298" alt="image" src="https://github.com/user-attachments/assets/ee309529-4965-4be5-ae0b-83060c17d9ad" />
+
+4.Exec into the container and look around the filesystem
+
+<img width="347" height="73" alt="image" src="https://github.com/user-attachments/assets/c0f616e7-8208-4f64-9d1b-6678bec48798" />
+
+5.Run a single command inside the container without entering it
+
+<img width="511" height="54" alt="image" src="https://github.com/user-attachments/assets/c8d116e6-2b1c-4278-a55e-820a53479aba" />
+
+6.Inspect the container — find its IP address, port mappings, and mounts
+
+<img width="516" height="251" alt="image" src="https://github.com/user-attachments/assets/502b0ab2-e406-4bd8-8b11-47f5fc16e6c9" />
+
+
+<img width="539" height="165" alt="image" src="https://github.com/user-attachments/assets/dccb5832-e0c1-4e7d-aae6-7d1c8e724610" />
+
+
+## Task 5: Cleanup
+
+Stop all running containers in one command
+* docker stop $(docker ps -q)
+
+Remove Stopped Containers
+* docker container prune
+
+Remove Unused Images
+* docker image prune -a
+
+Complete System Cleanup
+* docker system prune -a
