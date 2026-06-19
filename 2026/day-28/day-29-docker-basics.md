@@ -79,6 +79,58 @@ What Happened?
 
 ## Task 3: Run Real Containers
 
+1. Run an Ubuntu container in interactive mode — explore it like a mini Linux machine
+
+<img width="562" height="44" alt="image" src="https://github.com/user-attachments/assets/b9677587-759e-4c31-8a4a-c9aa29cf96bd" />
 
 
+<img width="491" height="182" alt="image" src="https://github.com/user-attachments/assets/80ebfbfd-5de0-4a11-844b-a00fe8788a54" />
+
+2. List all containers (including stopped ones)
+
+docker ps
+
+docker ps -a
+
+<img width="722" height="66" alt="image" src="https://github.com/user-attachments/assets/b48a8935-50f1-44b4-9031-acaacc7262b8" />
+
+3. Stop and remove a container
+* To stop a container docker stop < Name of container or container ID >
+* To remove a container docker remove < Name of container or container ID >
+
+First we have to stop the container and then remove the container
+
+## Task 4: Explore
+
+Run a container in detached mode — what's different?
+* docker run -d nginx
+* Detached mode runs the container in the background.
+  
+Give a container a custom name
+* docker run --name my-nginx nginx
+  
+Map a port from the container to your host
+* docker run -d -p 8080:80 nginx
+* Host port - 8080
+* container port - 80
+
+View Logs
+* docker logs nginx-demo
+
+Execute Commands Inside Running Container
+* docker exec -it nginx-demo bash
+
+
+Important Docker commands
+
+```bash
+docker run
+docker ps
+docker ps -a
+docker stop
+docker rm
+docker images
+docker logs
+docker exec
+```
 
