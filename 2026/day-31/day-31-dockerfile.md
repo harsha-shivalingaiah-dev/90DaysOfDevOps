@@ -34,5 +34,38 @@ CMD ["echo", "Hello from my custom image!"]
 
     <img width="403" height="179" alt="image" src="https://github.com/user-attachments/assets/d8e3cbf3-b1b1-47b7-a8db-480529f3dcb1" />
 
+## Task 2: Dockerfile Instructions
+
+Create a new Dockerfile that uses all of these instructions:
+
+```bash
+FROM — base image
+RUN — execute commands during build
+COPY — copy files from host to image
+WORKDIR — set working directory
+EXPOSE — document the port
+CMD — default command
+Build and run it. Understand what each line does
+```
+
+
+Dockerfile
+
+```bash
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y curl
+
+WORKDIR /app
+
+COPY apps.txt .
+
+EXPOSE 8080
+
+CMD ["cat", "apps.txt"]
+
+```
+
 
 
