@@ -174,3 +174,9 @@ Output
  
 ## Observation
 The data remained available because it was stored in a Docker volume rather than inside the container filesystem.
+
+
+## Inspect Volume
+
+docker volume ls
+docker volume inspect postgres-data
